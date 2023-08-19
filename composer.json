@@ -6,10 +6,7 @@
     "autoload": {
         "psr-4": {
             "Novikov7ua\\Packagios\\": "src/"
-        },
-        "files": [
-            "/config/payments.php"
-        ]
+        }
     },
     "authors": [
         {
