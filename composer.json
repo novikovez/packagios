@@ -1,0 +1,20 @@
+{
+    "name": "novikov7ua/packagios",
+    "description": "My First Package",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Novikov7ua\\Packagios\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "novikov7ua"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "8.2"
+    }
+}
