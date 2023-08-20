@@ -26,8 +26,8 @@ class GetPaymentInfoService
 
         return (object)[
             'success' => true,
-            'paymentId' => $response['id'],
-            'orderId' => $response['purchase_units'][0]['payments']['captures'][0]['id'],
+            'paymentId' => $response['purchase_units'][0]['payments']['captures'][0]['id'],
+            'orderId' => $response['id'],
             'status' => PaymentStatusEnum::getValueId($response['status']),
             'email' => $response['payment_source']['paypal']['email_address'],
             'amount' => $response['purchase_units'][0]['payments']['captures'][0]['amount']['value'],

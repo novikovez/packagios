@@ -20,9 +20,16 @@ class PaypalHandler implements PaymentInterface
     {
         $this->payPalClient->setApiCredentials([
             'mode' => $this->paymentDataDTO->getMode(),
-            'client_id' => $this->paymentDataDTO->getClientId(),
-            'client_secret' => $this->paymentDataDTO->getClientSecret(),
-            'app_id' => $this->paymentDataDTO->getAppId(),
+            'sandbox' => [
+                'client_id' => $this->paymentDataDTO->getClientId(),
+                'client_secret' => $this->paymentDataDTO->getClientSecret(),
+                'app_id' => $this->paymentDataDTO->getAppId(),
+            ],
+            'live' => [
+                'client_id' => $this->paymentDataDTO->getClientId(),
+                'client_secret' => $this->paymentDataDTO->getClientSecret(),
+                'app_id' => $this->paymentDataDTO->getAppId(),
+            ],
             'payment_action' => 'Sale',
             'currency' => 'USD',
             'notify_url' => '',
